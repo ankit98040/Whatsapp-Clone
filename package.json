@@ -1,0 +1,19 @@
+{
+  "name": "whatsapp-clone",
+  "version": "1.0.0",
+  "description": "a simple web app using node js ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ankit98040/Whatsapp-Clone.git"
+  },
+  "author": "Ankit",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ankit98040/Whatsapp-Clone/issues"
+  },
+  "homepage": "https://github.com/ankit98040/Whatsapp-Clone#readme"
+}
