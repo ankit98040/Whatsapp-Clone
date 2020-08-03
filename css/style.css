@@ -1,0 +1,10 @@
+.logo {
+    height: 35px;
+    width: 35px;
+    display: block;
+    margin: auto;
+}
+
+body {
+    background-image: linear-gradient(rgb(77, 60, 231), purple);
+}
