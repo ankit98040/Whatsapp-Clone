@@ -35,5 +35,5 @@ socket.on('recieve', data => {
 })
 
 socket.on('left', data => {
-    append(`${data.name} left the chat`, 'left')
+    append(`${data.name} left the chat`, 'right')
 })
