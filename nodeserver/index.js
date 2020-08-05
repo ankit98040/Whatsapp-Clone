@@ -1,4 +1,4 @@
-const io = require('socket.io')(8000)
+const io = require('socket.io')(3600)
 
 const users = {};
 
@@ -9,6 +9,6 @@ io.on('connection', socket => {
         socket.broadcast.emit('user-joined', name);
     });
     socket.on('send', message => {
-        socket.broadcast.emit('recieve', { message: message, name: user[socket.id] })
+        socket.broadcast.emit('recieve', { message: message, name: users[socket.id] })
     });
 });
