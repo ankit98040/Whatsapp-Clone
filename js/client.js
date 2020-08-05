@@ -1,9 +1,9 @@
 const socket = io('http://localhost:3600');
 
 const form = document.getElementById('send-container');
-
 const messageInput = document.getElementById('messageInp');
 const messageContainer = document.querySelector(".container");
+var audio = new Audio('swiftly.mp3');
 
 const append = (message, position) => {
     const messageElement = document.createElement('div');
@@ -11,6 +11,7 @@ const append = (message, position) => {
     messageElement.classList.add('message');
     messageElement.classList.add(position);
     messageContainer.append(messageElement);
+    audio.play();
 }
 
 form.addEventListener('submit', (e) => {
@@ -29,4 +30,8 @@ socket.on('user-joined', name => {
 
 socket.on('recieve', data => {
     append(`${data.name}: ${data.message}`, 'left')
+})
+
+socket.on('left', data => {
+    append(`${data.name} left the chat`, 'left')
 })
